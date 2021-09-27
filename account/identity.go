@@ -60,6 +60,7 @@ func CreatIdentityFromKey(key Key) (Identity, error) {
 	return newIdentity(recipient, key.Bytes())
 }
 
+
 func newIdentity(recipient []byte, key []byte) (Identity, error) {
 	recipientType := BytesToIdentityRecipient(recipient[(len(recipient) - RecipientLength):])
 	keyType := BytesToIdentityKey(key)
@@ -74,5 +75,6 @@ func (Self *Identity) GetRecipient() Recipient {
 // GetKey get it's key
 func (Self *Identity) GetKey() Key {
 	fmt.Println("logasfsafs")
+	fmt.Print("from remote")
 	return Self.key
 }
