@@ -73,5 +73,6 @@ func (Self *Identity) GetRecipient() Recipient {
 
 // GetKey get it's key
 func (Self *Identity) GetKey() Key {
+	fmt.Println("logasfsafs")
 	return Self.key
 }
